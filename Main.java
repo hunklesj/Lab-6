@@ -1,4 +1,3 @@
-import com.sun.net.ssl.TrustManagerFactory;
 
 class Main {
   public static void main(String[] args) {
@@ -14,32 +13,23 @@ class Main {
     private String treeType;
     private boolean leavesFall;
     private String leafColor;
-    private String doleavesFall;
+    private String doleavesFall; 
 
     Tree () {
       treeName ="";
       treeType = "";
       leavesFall = false;
       leafColor = "";
-      if(leavesFall = true){
-        doleavesFall="does";
       }
-        else{
-          doleavesFall ="does not";
-        }
-      }
+
     Tree(String atreeName, String atreeType, boolean aleavesFall, String aleafColor) {
       treeName =atreeName;
       treeType = atreeType;
       leavesFall = aleavesFall;
       leafColor = aleafColor;
-      if(leavesFall = true){
-        doleavesFall="does";
       }
-      else{
-        doleavesFall="does not";
-      }
-    }
+    
+
     void  setName(String thetreeName){
       treeName=thetreeName;
     }
@@ -64,8 +54,10 @@ class Main {
     String getleafColor(){
       return leafColor;
     }
-    void print(){
-      System.out.println("This is a " + treeName + " Tree. It is a " + treeType + " and its leaves are currenty " + leafColor + ". It " + doleavesFall +" lose its leaves for the winter.");
+        
+      void print(){
+      
+      System.out.println("This is a " + treeName + " Tree. It is a " + treeType + " and its leaves are currenty " + leafColor + ". It " + (leavesFall ? "Does" : "Does Not") +" lose its leaves for the winter.");
     }
   }
 
